@@ -12,6 +12,8 @@ http://www.springframework.org/schema/mvc
 http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 
     <context:component-scan base-package="com.cjemison"/>
+    <context:annotation-config/>
+    <mvc:annotation-driven/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix">
@@ -21,4 +23,5 @@ http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
             <value>.jsp</value>
         </property>
     </bean>
+    <mvc:resources mapping="/assets/**" location="classpath:/META-INF/resources/webjars/"/>
 </beans>
